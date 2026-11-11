@@ -1,12 +1,11 @@
-/* Stile iniziale: tipografia, colori e variabili CSS sono già predisposti.
-   Lavoreremo su collegamenti, CSS condiviso e disposizione delle schede. */
+/* Segnale: esempio completo della consegna su Home e Programma. */
 
-/* Scelte comuni: ogni regola usa var() per richiamarne il valore. */
+/* Valori condivisi: le regole interessate li richiamano con var(). */
 :root {
-  --colore-primario: #db02a1;
-  --colore-primario-scuro: #830565;
-  --colore-sfondo: #82f4f0;
-  --colore-testo: #13095a;
+  --colore-primario: #234c78;
+  --colore-primario-scuro: #163454;
+  --colore-sfondo: #f5f2e9;
+  --colore-testo: #202923;
   --font-testo: Arial, Helvetica, sans-serif;
   --font-titoli: Georgia, "Times New Roman", serif;
 }
@@ -29,12 +28,11 @@ a {
 }
 
 a:hover {
-  text-decoration-thickness: 3px;
+  text-decoration: underline;
 }
 
-a:focus-visible {
+a:focus {
   outline: 3px solid var(--colore-testo);
-  outline-offset: 4px;
 }
 
 .container {
@@ -74,9 +72,6 @@ nav a {
   padding: 0.25rem 0;
 }
 
-nav a[aria-current="page"] {
-  font-weight: bold;
-}
 
 .intro {
   padding: 3rem 0 1rem;
@@ -149,21 +144,21 @@ h3 {
 }
 
 .venues {
-  padding-left: 2 rem;
+  padding-left: 1.25rem;
 }
 
 .venues li {
   margin-bottom: 0.5rem;
 }
 
+/* Disposizione di base: una colonna. */
 .event-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1 rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
 .event-card {
-  margin-bottom: 0;
   overflow: hidden;
   border: 1px solid #b7c0b7;
   border-radius: 0.75rem;
@@ -177,14 +172,11 @@ h3 {
 }
 
 .event-body {
-  padding: 1.25rem;
-}
-
-.event-body p:last-child {
-  margin-bottom: 0;
+  padding: 1.5rem;
 }
 
 .event-place {
+  margin-bottom: 0;
   color: #46564b;
   font-size: 0.875rem;
 }
@@ -209,8 +201,16 @@ h3 {
   top: 1rem;
 }
 
-@media (max-width: 599px) {
+/* Da 600 px: due colonne. */
+@media (min-width: 600px) {
   .event-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Da 1024 px: tre colonne. Questa regola segue quella da 600 px. */
+@media (min-width: 1024px) {
+  .event-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
