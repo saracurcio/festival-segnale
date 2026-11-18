@@ -4,29 +4,36 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Programma — Segnale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
   <header class="site-header">
-    <div class="container">
-      <a class="brand" href="index.html">Segnale<span>Festival di design</span></a>
-      <nav>
+    <div class="container header-content">
+      <a class="brand" href="index.html">
+        Segnale<span>Festival di design</span>
+      </a>
+      <nav aria-label="Navigazione principale">
         <a href="index.html">Home</a>
-        <a href="programma.html">Programma</a>
+        <a href="programma.html" aria-current="page">Programma</a>
+        <a href="info.html">Info e luoghi</a>
       </nav>
     </div>
   </header>
 
   <main id="contenuto" class="container">
-    <section class="intro">
+    <section class="intro" aria-labelledby="titolo-programma">
       <p class="eyebrow">12–13 giugno · Torino · Festival immaginario</p>
       <h1 id="titolo-programma">Il programma</h1>
       <p class="lead">Incontri, laboratori e mostre: scegli da dove cominciare.</p>
       <p class="reading-text">Il venerdì esploriamo lettere, materiali e immagini. Il sabato incontriamo oggetti, mappe e progetti condivisi. Scopri gli appuntamenti e i luoghi del festival.</p>
     </section>
 
-    <section class="content-section">
+    <section class="content-section" aria-labelledby="titolo-eventi">
       <h2 id="titolo-eventi">Gli appuntamenti</h2>
       <div class="event-grid">
         <article class="event-card">
@@ -38,6 +45,7 @@
             <p class="event-place"><strong>Sede:</strong> Officina Nord</p>
           </div>
         </article>
+
         <article class="event-card">
           <img src="assets/materia-seconda.svg" alt="Forme sovrapposte che richiamano campioni di materiali" width="900" height="600">
           <div class="event-body">
@@ -47,6 +55,7 @@
             <p class="event-place"><strong>Sede:</strong> Spazio Forma</p>
           </div>
         </article>
+
         <article class="event-card">
           <img src="assets/citta-manifesto.svg" alt="Rettangoli colorati compongono una città astratta." width="900" height="600">
           <div class="event-body">
@@ -56,6 +65,7 @@
             <p class="event-place"><strong>Sede:</strong> Cortile Comune</p>
           </div>
         </article>
+
         <article class="event-card">
           <img src="assets/oggetti-dialogo.svg" alt="Due forme geometriche si fronteggiano sopra una linea comune." width="900" height="600">
           <div class="event-body">
@@ -65,6 +75,7 @@
             <p class="event-place"><strong>Sede:</strong> Officina Nord</p>
           </div>
         </article>
+
         <article class="event-card">
           <img src="assets/mappe-abitare.svg" alt="Un percorso collega tre punti su una mappa geometrica." width="900" height="600">
           <div class="event-body">
@@ -74,6 +85,7 @@
             <p class="event-place"><strong>Sede:</strong> Spazio Forma</p>
           </div>
         </article>
+
         <article class="event-card">
           <img src="assets/progettare-insieme.svg" alt="Moduli di colori diversi si incastrano in una composizione comune." width="900" height="600">
           <div class="event-body">
@@ -87,6 +99,10 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container"><p>Segnale · Progetto didattico · Festival immaginario</p></div></footer>
+  <footer class="site-footer">
+    <div class="container">
+      <p>Segnale · Progetto didattico · Festival immaginario</p>
+    </div>
+  </footer>
 </body>
 </html>
