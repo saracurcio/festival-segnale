@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "nome": "Officina di prova",
+    "indirizzo": "Corso Duca degli Abruzzi 24, Torino"
+  },
+  {
+    "id": 2,
+    "nome": "Spazio Forma",
+    "indirizzo": "Viale Mattioli 39, Torino"
+  },
+  {
+    "id": 3,
+    "nome": "Cortile Comune",
+    "indirizzo": "Corso Luigi Settembrini 178, Torino"
+  }
+]
